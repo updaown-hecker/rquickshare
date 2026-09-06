@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "BlynxShare",
+    "slug": "blynxshare",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "blynxshare",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "BlynxShare uses your local network to discover nearby devices.",
+        "NSBonjourServices": ["_FC9F5ED42C8A._tcp"]
+      }
+    },
+    "android": {
+      "package": "app.blynxshare.mobile",
+      "permissions": ["android.permission.ACCESS_WIFI_STATE", "android.permission.ACCESS_FINE_LOCATION", "android.permission.BLUETOOTH_SCAN", "android.permission.BLUETOOTH_CONNECT", "android.permission.POST_NOTIFICATIONS"]
+    },
+    "plugins": ["expo-router", "expo-document-picker", "expo-notifications"]
+  }
+}

@@ -1,11 +1,11 @@
 [package]
-name = "rquickshare"
+name = "blynxshare"
 version = "0.11.5"
-default-run = "rquickshare"
+default-run = "blynxshare"
 edition = "2021"
 authors = ["martichou"]
 repository = "https://github.com/Martichou/rquickshare"
-license = "AGPL-3.0"
+license = "GPL-3.0-only"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]

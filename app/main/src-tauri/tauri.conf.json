@@ -16,10 +16,10 @@
     ],
     "resources": [],
     "externalBin": [],
-    "copyright": "",
-    "category": "DeveloperTool",
-    "shortDescription": "",
-    "longDescription": "",
+    "copyright": "BlynxShare contributors; RQuickShare copyright (C) 2024 Martin Andre",
+    "category": "Utility",
+    "shortDescription": "Fast, private Quick Share-compatible transfers for Linux",
+    "longDescription": "BlynxShare is a polished Linux desktop client built on the GPL-3.0 RQuickShare transport core.",
     "macOS": {
       "frameworks": [],
       "exceptionDomain": "",
@@ -39,12 +39,12 @@
     "beforeDevCommand": "pnpm vite:dev",
     "devUrl": "http://localhost:1420"
   },
-  "productName": "rquickshare",
-  "identifier": "dev.mandre.rquickshare",
+  "productName": "BlynxShare",
+  "identifier": "app.blynxshare.desktop",
   "app": {
     "windows": [
       {
-        "title": "RQuickShare",
+        "title": "BlynxShare",
         "width": 900,
         "height": 600,
         "resizable": true,

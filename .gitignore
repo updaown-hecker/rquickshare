@@ -1,4 +1,57 @@
+# Node / frontend dependencies
+node_modules/
+.pnpm-store/
+.npm/
+
+# Frontend build output
+dist/
+dist-ssr/
+build/
+.expo/
+.expo-shared/
+web-build/
+*.local
+
+# Rust / Tauri build output
 target/
-Cargo.lock
+app/main/src-tauri/target/
+core_lib/target/
+
+# Generated protocol/build files
+proto_comp/
+core_lib/proto_comp/
 *.snap
-gen
+/gen
+
+# Logs and diagnostics
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+root.txt
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+*.suo
+*.user
+
+# Mobile native outputs
+mobile/android/
+mobile/ios/
+mobile/.expo/
+
+# Local app data
+.local/
+.settings.json
+LOCAL_NOTES.md
