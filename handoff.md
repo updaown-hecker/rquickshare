@@ -90,7 +90,7 @@ pnpm build
 env WEBKIT_DISABLE_COMPOSITING_MODE=1 pnpm dev
 ```
 
-The product name and desktop identifier are now `BlynxShare` / `app.blynxshare.desktop`; the transport crate remains the upstream `rqs_lib` package.
+The product name and desktop identifier are now `BlynxShare` / `app.blynxshare.desktop`; the transport crate remains the upstream `rqs_lib` package. The checked-in Tauri toolchain selector uses stable Rust because the upstream `bluer` dependency currently fails under newer nightly type inference.
 
 ## Mobile build and run
 
@@ -120,7 +120,10 @@ The mobile UI has real document selection, native permission requests, send/rece
 - `pnpm vite:build` passes; the only output is the existing Browserslist freshness warning.
 - `pnpm lint` passes.
 - Installed the separate mobile dependencies and `npm run typecheck` passes.
-- The native Rust check was attempted with `pnpm check` but cannot run in this container because `cargo` is not installed (`cargo: not found`). A real Tauri/package build therefore still needs to be run on a Rust/Tauri-capable Debian or Ubuntu host.
+- Installed the Debian/Ubuntu Rust, protobuf, WebKit/GTK, appindicator, and packaging prerequisites in the build environment.
+- The desktop native check passes with the repository's stable Rust toolchain: `RUSTUP_TOOLCHAIN=stable cargo check` from both `core_lib` and `app/main/src-tauri`.
+- The complete desktop release build passes with `pnpm build` and produces the native executable plus `.deb`, `.rpm`, and AppImage bundles under `app/main/src-tauri/target/release/bundle/`.
+- The mobile Expo production export passes with `npm run export`, producing web, Android JavaScript/Hermes, and iOS JavaScript/Hermes bundles in `mobile/dist/`. Native APK/IPA compilation still requires the Android SDK or Xcode, respectively.
 
 ## Known issues and honest limitations
 

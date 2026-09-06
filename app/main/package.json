@@ -1,6 +1,7 @@
 {
   "name": "blynxshare-desktop",
   "private": true,
+  "license": "GPL-3.0-only",
   "type": "module",
   "scripts": {
     "dev": "cross-env RUST_BACKTRACE=1 concurrently -k \"tauri dev\" \"pnpm devtools\"",

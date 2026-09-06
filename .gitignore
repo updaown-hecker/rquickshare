@@ -22,6 +22,7 @@ proto_comp/
 core_lib/proto_comp/
 *.snap
 /gen
+**/gen/
 
 # Logs and diagnostics
 *.log

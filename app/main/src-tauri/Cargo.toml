@@ -6,6 +6,7 @@ edition = "2021"
 authors = ["martichou"]
 repository = "https://github.com/Martichou/rquickshare"
 license = "GPL-3.0-only"
+description = "BlynxShare desktop client built on the GPL-3.0 RQuickShare core"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
