@@ -36,8 +36,8 @@ function _displayedItems(vm: TauriVM): Array<DisplayedItem> {
 			text_description: el.meta?.text_description ?? undefined,
 			text_payload: el.meta?.text_payload ?? undefined,
 			text_type: el.meta?.text_type ?? undefined,
-			ack_bytes: (el.meta?.ack_bytes as number | undefined) ?? undefined,
-			total_bytes: (el.meta?.total_bytes as number | undefined) ?? undefined,
+			ack_bytes: el.meta?.ack_bytes != null ? Number(el.meta.ack_bytes) : undefined,
+			total_bytes: el.meta?.total_bytes != null ? Number(el.meta.total_bytes) : undefined,
 		};
 
 		if (idx !== -1) {
